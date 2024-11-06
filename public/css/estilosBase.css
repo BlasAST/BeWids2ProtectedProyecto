@@ -1,0 +1,234 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+}
+:root {
+
+    --color-fondo:#d6e0e5;
+    --color-secundario:#0b191f;
+    --color-terciario:#BF1B4B;
+    --grande:40px;
+    --pequenio:14px;
+    --mediano:24px;
+}
+.logo{
+    width: 200px;
+    height: 100px;
+    background-image: url(../imagenes/imagenesBase/imagenLogo2.png);
+    background-position: center;
+    background-size: 300px;
+}
+
+.cabecera{
+    background-color:var(--color-secundario);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.cabecera :first-child{margin-left: 2.5%;}
+.cabecera .icoPerfil{margin-right: 2.5%;}
+.cabecera .bajustes{margin-right:2.5%;}
+/* boton de abrir menu en movil? */
+.hamburgesa{
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: 0;
+    padding: 0;  
+}
+/* imagen derecha */
+.icoPerfil{
+    width: 50px;
+    height: 50px;
+}
+.icoPerfil{
+    width: 50px;
+    height: 50px;
+}
+
+.hamburgesa::before{
+    content: "";
+    display: block;
+    width: 30px;
+    height: 4px;
+    /* background-color:#BF1B4B; */
+    background-color:white;
+    /* box-shadow:0 -15px#BF1B4B; */
+    box-shadow:0 -14px white;
+}
+.hamburgesa::after{
+    content: "";
+    display: block;
+    width: 30px;
+    height: 4px;
+    /* background-color: #BF1B4B; */
+    background-color: white;
+    transform: translateY(10px);
+}
+/* .footer{
+    background-color: var(--color-secundario);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: start;
+    gap: 5%;
+    justify-content: space-evenly;
+} */
+.footer {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-secundario);
+    text-align: center;
+}
+
+.footer > div:last-of-type{
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+}
+
+.footer> h2{
+    background-color: var(--color-terciario);
+    color: white;
+    font-size: 2rem;
+} 
+
+.footer div h2{
+    color: white;
+    font-size: 2rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+} 
+
+.footer .redes img{
+    width: 6%;
+    filter: invert(100%);
+    transition: 1s;
+}
+.footer .redes img:hover{
+    width: 8%;
+}
+.redes{
+    display: flex;
+    flex-direction: column;
+}
+.redes *{
+    margin: 0;
+}
+.redes >div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.redes > div > *{
+    margin: 3% 5%;
+}
+.footer .iconoFooter{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+.footer .iconoFooter img{
+    width: 20%;
+}
+.footer a {
+    margin: 0;
+    margin: 1% 0;
+    font-size: 2rem;
+    text-decoration: none;
+    color:  rgb(255, 255, 255);
+    
+}
+.ajustes,.bajustes{
+    display: none;
+}
+
+/* Tamaños Fuentes */
+h2{font-size: var(--grande);}
+a{font-size: var(--pequenio);}
+p{font-size: var(--mediano);}
+
+
+@media screen and  (max-width:1440px){
+    .logo{
+        height: 50px;
+        background-size: 150px;
+    }
+    .icoPerfil{
+        width: 35px;
+        height: 35px;
+    }
+    
+    .hamburgesa::before{
+        height: 2px;
+        box-shadow:0 -10px white;
+    }
+    .hamburgesa::after{
+        height: 2px;
+        transform: translateY(8px);
+    }
+    .footer> h2{
+        font-size: 1rem;
+    }
+    .footer div h2{
+        font-size: 1rem;
+    } 
+    .footer a {
+        font-size: 1rem;
+    }
+    .footer .redes img{
+        width: 4%;
+        filter: invert(100%);
+        transition: 1s;
+    }
+    .footer .redes img:hover{
+        width: 6%;
+    }
+}
+@media screen and  (max-width:920px){
+    .footer> h2{
+        font-size: 1rem;
+    }
+}
+
+@media screen and  (max-width:680px){
+    .logo{
+        height: 30px;
+        background-size: 80px;
+        background-repeat: no-repeat;
+    }
+    .icoPerfil{
+        width: 20px;
+        height: 20px;
+    }
+    
+    .hamburgesa::before{
+        width: 20px;
+        height: 1px;
+        box-shadow:0 -6px white;
+    }
+    .hamburgesa::after{
+        width: 20px;
+        height: 1px;
+        transform: translateY(5px);
+    }
+    .footer> h2{
+        font-size: 0.5rem;
+    }
+
+    .footer div h2{
+        font-size: 0.5rem;
+    } 
+    .footer a {
+        font-size: 0.5rem;
+    }
+    .footer .redes img{
+        width: 2%;
+        filter: invert(100%);
+        transition: 1s;
+    }
+    .footer .redes img:hover{
+        width: 4%;
+    }
+}

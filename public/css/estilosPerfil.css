@@ -1,0 +1,278 @@
+body,
+form,
+input,
+ul,
+div,
+button,
+h1,
+h2,
+h6,
+a,
+li,
+img,
+header,
+footer {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* background-color: #8f9da2; */
+    background-color: var(--color-fondo);
+    font-family: "Open Sans", sans-serif;
+}
+
+/* Logo mediante css para no perder calidad */
+header img {
+    width: 50px;
+}
+
+.icoPerfil {
+    display: none;
+}
+
+/* main { */
+    /* width: min(1200px, 100%); */
+    /* margin: 0 auto; */
+/* } */
+
+/* Colocacion movil quitando este flex? */
+.contenedor {
+    display: flex;
+    justify-content: space-evenly;
+    align-items:stretch;
+    width: 100%;
+}
+
+
+.bperfil,
+.bsesiones {
+    display: block;
+    margin: 10px;
+    background-color: var(--color-terciario);
+    border: 0;
+    height: 600px;
+    width: 15%;
+    border-radius: 40px;
+}
+
+h3:not(.no){
+    text-decoration: underline;
+}
+.no{
+    text-align: center;
+}
+.bperfil {
+    display: none;
+}
+
+
+.perfil>h1 {
+    text-align: center;
+    font-size: var(--mediano);
+    margin: 2% 0;
+}
+
+.parte1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parte1 img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+
+.parte1>div {
+     width: 350px;
+     display: flex;
+     flex-direction: column;
+}
+
+.sesiones {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 80%;
+    min-height: 80dvh;
+}
+.sesiones div{
+    width: 80%;
+    background-color: var(--color-secundario);
+    color: white;
+    margin: 10px 0;
+    text-align: center;
+}
+.formPerfil{
+    display: flex;
+}
+.perfil h3{
+    display: inline-block;
+}
+
+
+.noVisible {
+    margin-left: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+.bajustes{
+    display: block;
+}
+.ajustes {
+    display: none;
+    position: absolute;
+    background-color: inherit;
+    right: 2%;
+    top: 100px;
+    padding: 2vw;
+    width: 20vw;
+    color: white;
+}
+
+.ajustes.mostrar {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    text-align: center;
+}
+
+.ajustes>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ajustes>div>* {
+    font-size: calc (var(--mediano) - 2vw);
+    margin: 2%;
+}
+
+.ajustes>div>a {
+    color: white;
+}
+.crearPortal{
+    width: 50%;
+    background-color: var(--color-terciario);
+    color: white;
+    border-radius: 25px;
+    border: none;
+    font-size: larger;
+    padding: 20px 0;
+    margin: 20px 0;
+
+}
+.formPortal{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+.formPortal input{
+    border-radius: 25px;
+    border: 1px solid var(--color-secundario);
+    padding: 5px 0;
+    width: 60%;
+    text-indent: 2%;
+}
+.formPortal label{
+    margin: 20px 0 10px;
+}
+.formPortal p{
+    font-size:medium;
+    width: 80%;
+    color: rgba(0, 0, 0, 0.8);
+}
+.formPortal button{
+    color: white;
+    padding: 5px 10px;
+    background-color: var(--color-secundario);
+    border: none;
+}
+.formPortal :last-child{
+    background: var(--color-terciario);
+    margin: 9px 0 10px;
+    color: white;
+}
+.portal form{
+    height: 1px;
+}
+.portal{
+    display:flex;
+    padding:0;
+    align-items:center
+}
+.portal div{
+    flex-basis:max(100px,20%);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    padding:0;
+    height:90px;
+    margin: 0 10px 0 0;
+}
+
+@media screen and  (max-width:920px){
+
+    .contenedor{
+        flex-direction: column;
+        align-items: center;
+    }
+    .bperfil,
+    .bsesiones {
+    height: 100px;
+    width: 90%;
+    border-radius: 40px;
+    }
+    h2{
+        font-size: 4vw;
+    }
+}
+@media screen and  (max-width:780px){
+
+    h3{
+        font-size: 2vw;
+    }
+    .no{
+        font-size: 2.5vw;
+    }
+    .perfil{
+        display: flex;
+        flex-direction: column;
+    }
+    .parte1 img{
+        width: 150px;
+        height: 150px;
+    }
+    .parte1>div {
+        width: 180px;
+        display: flex;
+        flex-direction: column;
+   }
+   .bperfil,
+    .bsesiones {
+    height: 50px;
+    width: 90%;
+    border-radius: 40px;
+    }
+}
+@media screen and  (max-width:525px){
+    .parte1{
+        flex-direction: column;
+    }
+    .parte1 img{
+        width: 150px;
+        height: 150px;
+    }
+    .parte1>div {
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+   }
+
+   body{
+    min-width: 300px;
+}
+}
